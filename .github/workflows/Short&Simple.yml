@@ -6,6 +6,3 @@
       --description "${{ env.DESC }}" \
       --keywords "facts,short,learn" \
       --privacyStatus public
-on:
-  schedule:
-    - cron: '0 20 * * *'   # 06:00 AET (UTC+10)
