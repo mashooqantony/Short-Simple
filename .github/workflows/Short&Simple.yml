@@ -1,0 +1,11 @@
+- name: Upload to YouTube
+  run: |
+    python youtube_upload.py \
+      --file final.mp4 \
+      --title "${{ env.TITLE }}" \
+      --description "${{ env.DESC }}" \
+      --keywords "facts,short,learn" \
+      --privacyStatus public
+on:
+  schedule:
+    - cron: '0 20 * * *'   # 06:00 AET (UTC+10)
